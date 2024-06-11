@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="CSS\style.css">
+  <title>Formulário de Cadastro</title>
+</head>
+
+<body>
+  <div class="form">
+    <form action="processar_dados.php" method="POST"><br>
+      <fieldset>
+        <legend>Cadastro</legend><br>
+        <div class="inputBox">
+          <input type="text" name="nome" id="nome" class="inputUser" required>
+          <label for="nome" class="labelInput">Nome Completo / Razão Social</label><br><br>
+        </div>
+        <div class="inputBox">
+          <input type="int" name="telefone" id="telefone" class="inputUser" required>
+          <label for="telefone" class="labelInput">Telefone com DDD</label><br><br>
+        </div>
+        <div class="inputBox">
+          <input type="text" name="cpf" id="cpf" class="inputUser" maxlength="18" required>
+          <label for="cpf" class="labelInput">CPF / CNPJ</label>
+          <span id="cpfError" style="color: red; display: none;">CPF/CNPJ inválido</span>
+          <span id="cpfValid" style="color: green; display: none;">CPF/CNPJ válido</span><br><br>
+        </div>
+        <div class="inputBox">
+          <input type="text" name="rg" id="rg" class="inputUser" maxlength="10" required>
+          <label for="rg" class="labelInput">RG</label>
+        </div><br><br>
+        <div class="inputBox">
+          <label for="data_nasc" class="labelInput">Data de Nascimento</label><br>
+          <input type="date" name="data_nasc" id="data_nasc" class="inputUser" required><br><br>
+        </div>
+        <div class="inputBox">
+          <input type="text" name="email" id="email" class="inputUser" required>
+          <label for="email" class="labelInput">E-mail</label>
+          <span id="emailError" style="color: red; display: none;">E-mail inválido</span>
+          <span id="emailValid" style="color: green; display: none;">E-mail válido</span>
+        </div><br><br>
+        <div class="inputBox">
+          <label for="sexo" class="labelInput">Sexo</label><br>
+          <select name="sexo" id="sexo" class="inputUser1">
+            <option value="Escolha Ident. Genero">Escolha Ident. Genero</option>
+            <optgroup label="Cisgenero">
+              <option value="Mulher">Mulher</option>
+              <option value="Homem">Homem</option>
+            </optgroup>
+            <optgroup label="Transgenero/Transexual">
+              <option value="Mulher transgênero">Mulher transgênero</option>
+              <option value="Homem transgênero">Homem transgênero</option>
+              <option value="Travesti">Travesti</option>
+            </optgroup>
+            <optgroup label="Não-Binário">
+              <option value="Agênero"> Agênero</option>
+              <option value="7Andrógino (andrógine)">Andrógino (andrógine)</option>
+              <option value="Gênero fluido">Gênero fluido</option>
+              <option value="Mulher não-binária (não-binárie)">Mulher não-binária (não-binárie)</option>
+              <option value="Homem não-binário (não-binárie)">Homem não-binário (não-binárie)</option>
+              <option value="Neutrois">Neutrois</option>
+              <option value="Demigênero">Demigênero</option>
+              <option value="Queer">Queer</option>
+              <option value="Xenogênero">Xenogênero</option>
+            </optgroup>
+          </select>
+        </div><br>
+
+        <div class="endereço">
+          <h3>Endereço</h3>
+        </div>
+        <div class="inputBox">
+          <input type="text" name="cep" id="cep" class="inputUser" required>
+          <label for="cep" class="labelInput">CEP</label><br><br>
+        </div>
+        <div class="inputBox">
+          <input type="text" name="rua" id="rua" class="inputUser2" readonly>
+          <label for="rua" class="labelInput2">Rua/Av./Trav</label><br><br>
+        </div>
+        <div class="inputBox">
+          <input type="text" name="numero" id="numero" class="inputUser" required>
+          <label for="numero" class="labelInput">Número</label><br><br>
+        </div>
+        <div class="inputBox">
+          <input type="text" name="comp" id="comp" class="inputUser" required>
+          <label for="comp" class="labelInput">Complemento</label><br><br>
+        </div>
+        <div class="inputBox">
+          <input type="text" name="bairro" id="bairro" class="inputUser2" readonly>
+          <label for="bairro" class="labelInput2">Bairro</label><br><br>
+        </div>
+        <div class="inputBox">
+          <input type="text" name="cidade" id="cidade" class="inputUser2" readonly>
+          <label for="cidade" class="labelInput2">Cidade</label><br><br>
+        </div>
+        <div class="inputBox">
+          <input type="text" name="uf" id="uf" class="inputUser2" readonly>
+          <label for="uf" class="labelInput2">Estado</label>
+          <div class="acao"><br><br>
+            <input type="submit" id="Enviar" value="Enviar">
+          </div><br>
+      </fieldset>
+    </form>
+  </div>
+  <script src="main.js"></script>
+</body>
+
+<header>
+
+</header>
+
+</html>
